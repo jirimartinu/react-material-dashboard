@@ -1,11 +1,3 @@
-import { IAlertState } from './states/AlertState';
-import { IUsersState } from './states/UsersState';
-import { IAuthenticationState } from './states/AuthenticationState';
-
-import { AlertReducer } from './reducers/AlertReducer';
-import { UsersReducer } from './reducers/UsersReducer';
-import { AuthenticationReducer } from './reducers/AuthenticationReducer';
-
 import { ISidebarState } from './states/layouts/Main/components/Sidebar/SidebarState';
 import { ISidebarNavState } from './states/layouts/Main/components/Sidebar/components/SidebarNavState';
 import { IAccountDetailsState } from './states/views/Account/components/AccountDetailsState';
@@ -41,10 +33,6 @@ import { TopbarReducer } from './reducers/layouts/Main/components/Sidebar/compon
 
 // The top-level state object
 export interface IApplicationState {
-  alert: IAlertState;
-  users: IUsersState;
-  authentication: IAuthenticationState;
-
   screen: IScreenState;
 
   // Layouts
@@ -76,10 +64,6 @@ export interface IApplicationState {
 // the reducer with the matching name. It's important that the names match exactly, and that the reducer
 // acts on the corresponding ApplicationState property type.
 export const reducers = {
-  alert: AlertReducer,
-  users: UsersReducer,
-  authentication: AuthenticationReducer,
-
   screen: ScreenReducer,
 
   // Layouts
